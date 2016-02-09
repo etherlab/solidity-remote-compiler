@@ -1,0 +1,25 @@
+{
+  "name": "solidity-comp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "method-override": "^2.3.5",
+    "solc": "git://github.com/chriseth/browser-solidity"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etherlab/solidity-remote-compiler/issues"
+  },
+  "homepage": "https://github.com/etherlab/solidity-remote-compiler#readme"
+}
