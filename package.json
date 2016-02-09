@@ -10,7 +10,7 @@
     "body-parser": "^1.14.2",
     "express": "^4.13.4",
     "method-override": "^2.3.5",
-    "solc": "git://github.com/chriseth/browser-solidity"
+    "solc": "git://github.com/chriseth/browser-solidity#gh-pages"
   },
   "devDependencies": {},
   "scripts": {
