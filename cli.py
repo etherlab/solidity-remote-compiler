@@ -24,23 +24,23 @@ if __name__ == '__main__':
     parser.add_argument('-v', help = 'use version compiler')
     group.add_argument('-l', help = 'list availables compiler', action='store_true')
     parser.add_argument('-u', help = 'url of compiler', default="http://localhost:8080/api/compiler")
-    ns = parser.parse_args()
+    args = parser.parse_args()
     
     msg = {}
-    if ns.v :
-      msg['version'] = ns.v
+    if args.v :
+      msg['version'] = args.v
     
-    if ns.f:
+    if args.f:
       msg['input'] = {}
-      for f in ns.f:
+      for f in args.f:
         read_sources(f, msg['input'])
 
-      req = urllib2.Request(ns.u, json.dumps(msg), {'Content-Type': 'application/json'})
+      req = urllib2.Request(args.u, json.dumps(msg), {'Content-Type': 'application/json'})
       response = urllib2.urlopen(req)
       print response.read()
     
-    if ns.l : 
-      req = urllib2.Request(ns.u)
+    if args.l : 
+      req = urllib2.Request(args.u)
       response = urllib2.urlopen(req)  
       pprint(response.read())
 
