@@ -42,7 +42,9 @@ router.route('/compiler')
 
     if (req.body.input !== undefined) {
       var output = compiler.compile({sources: req.body.input}, 1)
-      res.json(output)
+      var data = {}
+      Object.keys(output.contracts).map(function(k){ data[k] = {abi: output.contracts[k].interface, code:output.contracts[k].bytecode }})
+      res.json(data)
     } else {
       res.json({ error: 'no source specified' })
     }

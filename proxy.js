@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(errorHandler);
 
-var solcVersions = fs.readFileSync( './node_modules/solc/bin/list.txt').toString().split("\n")
+var solcVersions = fs.readFileSync( './list.txt').toString().split("\n")
 solcVersions.pop()
 solcVersions = solcVersions.map( function (e) {return  e.slice(8,-3)})
 
